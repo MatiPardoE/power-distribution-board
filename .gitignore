@@ -1,0 +1,8 @@
+*.lck
+*wks
+*backups
+*.lib
+*.prl
+*.sch
+*-cache
+*.kicad_prl
