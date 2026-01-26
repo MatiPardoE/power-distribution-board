@@ -6,3 +6,4 @@
 *.sch
 *-cache
 *.kicad_prl
+*auto*
