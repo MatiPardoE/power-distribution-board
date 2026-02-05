@@ -3769,6 +3769,10 @@
 		(uuid "1db1c8ac-68ba-452e-8556-6481d3a186b4")
 	)
 	(no_connect
+		(at 133.35 166.37)
+		(uuid "2ba89305-6aae-4f4e-b501-9c59fd14eb71")
+	)
+	(no_connect
 		(at 187.96 124.46)
 		(uuid "4689faba-1684-4b2e-afd5-b3e37f23fc44")
 	)
@@ -5604,16 +5608,6 @@
 		)
 		(uuid "15d6a8d1-dc2a-48ea-9082-59936bbd2000")
 	)
-	(label "EQEP_B"
-		(at 247.65 39.37 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "1609c5b2-777c-41ad-8fe8-2a70c103846c")
-	)
 	(label "CAN_B_L_2"
 		(at 48.26 102.87 0)
 		(fields_autoplaced yes)
@@ -6254,16 +6248,6 @@
 		)
 		(uuid "707a34c5-606c-43da-881a-64420d45c899")
 	)
-	(label "EQEP_B"
-		(at 133.35 166.37 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "70e87282-7a4f-46e6-babe-113ee6ffe1d3")
-	)
 	(label "PWM_Light"
 		(at 247.65 59.69 180)
 		(fields_autoplaced yes)
@@ -6821,6 +6805,16 @@
 			(justify left bottom)
 		)
 		(uuid "b04fd89f-fa94-49c4-a081-31a1287037b9")
+	)
+	(label "FLOW_OUT_SIGNAL"
+		(at 247.65 39.37 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b6b39dc7-3c36-41df-a242-2e0401cfa67c")
 	)
 	(label "CAN_B_L_7"
 		(at 93.98 137.16 0)
