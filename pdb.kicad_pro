@@ -195,6 +195,7 @@
         0.6,
         0.8,
         1.2,
+        3.0,
         4.25,
         6.0,
         8.5
@@ -440,10 +441,10 @@
       "extra_units": "error",
       "footprint_filter": "ignore",
       "footprint_link_issues": "warning",
-      "four_way_junction": "ignore",
+      "four_way_junction": "warning",
       "global_label_dangling": "warning",
       "hier_label_mismatch": "error",
-      "label_dangling": "error",
+      "label_dangling": "warning",
       "label_multiple_wires": "warning",
       "lib_symbol_issues": "warning",
       "lib_symbol_mismatch": "warning",
@@ -464,7 +465,7 @@
       "similar_labels": "warning",
       "similar_power": "warning",
       "simulation_model_issue": "ignore",
-      "single_global_label": "ignore",
+      "single_global_label": "warning",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
       "undefined_netclass": "error",
@@ -485,7 +486,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.127,
+        "clearance": 0.254,
         "diff_pair_gap": 0.254,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.1524,
@@ -496,10 +497,30 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.127,
+        "track_width": 0.254,
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "clearance": 0.3,
+        "name": "CAN",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.254,
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.5,
+        "name": "Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.6,
+        "via_diameter": 1.0,
+        "via_drill": 0.5
       }
     ],
     "meta": {
@@ -507,7 +528,16 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "Power",
+        "pattern": "/VBat"
+      },
+      {
+        "netclass": "CAN",
+        "pattern": "/CAN*"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -517,7 +547,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "extra/pdb.step",
       "svg": "",
       "vrml": ""
     },
@@ -688,6 +718,12 @@
           "group_by": false,
           "label": "Check_prices",
           "name": "Check_prices",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Function",
+          "name": "Function",
           "show": false
         }
       ],
