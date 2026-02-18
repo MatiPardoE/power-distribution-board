@@ -58,7 +58,28 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "clearance|258380000|285840000|57fa2883-c3f3-4052-9f3c-634e62853631|ed923cab-a411-4247-87d3-81ff752d4ffa",
+          "Pads en footprint"
+        ],
+        [
+          "clearance|271367308|169638462|1c584b0b-e553-4bf4-874c-55c969aedd22|5abe4212-6961-4f5b-9bb3-fbcb8e4565ff",
+          "Jumper"
+        ],
+        [
+          "clearance|271392308|172948462|4623005d-dc89-413b-9d65-931d7b27c212|56adbcce-125b-4a59-ae79-4fe310052314",
+          "Jumper"
+        ],
+        [
+          "clearance|271775000|170250000|1c584b0b-e553-4bf4-874c-55c969aedd22|940ed22d-55c9-425f-8a5b-8b1cbafabefa",
+          "Jumper"
+        ],
+        [
+          "clearance|271800000|173560000|4623005d-dc89-413b-9d65-931d7b27c212|e4f00c51-7bb0-47da-ac49-ee66ceb99e71",
+          "Jumper"
+        ]
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -134,13 +155,13 @@
         "min_hole_to_hole": 0.5,
         "min_microvia_diameter": 0.0,
         "min_microvia_drill": 0.0,
-        "min_resolved_spokes": 2,
+        "min_resolved_spokes": 1,
         "min_silk_clearance": 0.13,
         "min_text_height": 1.0,
         "min_text_thickness": 0.15,
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.254,
-        "min_via_annular_width": 0.22,
+        "min_via_annular_width": 0.15,
         "min_via_diameter": 0.6,
         "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
@@ -506,17 +527,24 @@
         "clearance": 0.3,
         "name": "CAN",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
+        "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.254,
         "via_diameter": 0.6,
         "via_drill": 0.3
       },
       {
+        "clearance": 0.35,
+        "name": "GND",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
         "clearance": 0.5,
         "name": "Power",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
+        "priority": 2,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.6,
         "via_diameter": 1.0,
@@ -536,6 +564,10 @@
       {
         "netclass": "CAN",
         "pattern": "/CAN*"
+      },
+      {
+        "netclass": "GND",
+        "pattern": "GND"
       }
     ]
   },
